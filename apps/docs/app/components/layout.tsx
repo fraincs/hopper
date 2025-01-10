@@ -8,6 +8,7 @@ import type { ReactNode } from "react";
 interface Data {
     frontmatter: ComponentData;
     slugs: string[];
+    content: ReactNode;
 }
 
 function formatComponentData(data: Data[]) {
