@@ -1,14 +1,13 @@
-import type { ReactNode } from "react";
+import { type ComponentData, getComponentDetails } from "@/app/lib/getComponentDetails.ts";
+import getPageLinks from "@/app/lib/getPageLinks.ts";
 import Sidebar from "@/app/ui/layout/sidebar/Sidebar";
 import Wrapper from "@/app/ui/layout/wrapper/Wrapper";
 import { SidebarProvider } from "@/context/sidebar/SidebarProvider";
-import { type ComponentData, getComponentDetails } from "@/app/lib/getComponentDetails.ts";
-import getPageLinks from "@/app/lib/getPageLinks.ts";
+import type { ReactNode } from "react";
 
 interface Data {
     frontmatter: ComponentData;
     slugs: string[];
-    content: ReactNode;
 }
 
 function formatComponentData(data: Data[]) {
